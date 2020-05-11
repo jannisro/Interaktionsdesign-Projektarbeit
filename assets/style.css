@@ -22,3 +22,26 @@
     color: #fafafa;
     text-decoration: none;
 }
+
+a.no-decoration,
+.card[href*="user.html"] {
+text-decoration: none !important;
+color: #000 !important;
+}
+
+.card[href*="user.html"] {
+    transition: all 250ms;
+}
+
+.card[href*="user.html"]:hover {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.35) !important;
+}
+
+.card[href*="user.html"] img {
+    max-width: 10rem;
+    width: 100%;
+}
+
+main.container {
+    margin-bottom: 7rem;
+}
