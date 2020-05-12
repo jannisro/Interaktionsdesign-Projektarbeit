@@ -19,7 +19,134 @@
     </nav>
     <main class="container">
 
+        <div class="card mt-5 p-5">
+            <div class="row">
+                <div class="col-lg-3 d-flex flex-column align-items-center">
+                    <img src="assets/person.svg" style="max-width: 10rem;">
+                    <button class="btn btn-sm btn-outline-secondary">Profilbild bearbeiten</button>
+                </div>
+                <div class="col form px-4">
+                    <div class="form-row my-3">
+                        <div class="col-md col-sm-10 form-group">
+                            <label>Name</label>
+                            <input type="text" class="form-control"placeholder="Name" value="Katharina Muster">
+                        </div>
+                        <div class="col-md col-sm-10 form-group">
+                            <label>E-Mail</label>
+                            <input type="text" class="form-control"placeholder="Name" value="katharina.muster@gmail.com">
+                        </div>
+                    </div>
+                    <div class="form-row my-3">
+                        <div class="col-md col-sm-10 form-group">
+                            <label>Geschlecht</label>
+                            <select class="form-control">
+                                <option>Weiblich</option>
+                                <option>Männlich</option>
+                                <option>Divers</option>
+                            </select>
+                        </div>
+                        <div class="col-md col-sm-10 form-group">
+                            <label>Alter</label>
+                            <input type="number" class="form-control" placeholder="Alter" value="30" min="16" max="120" step="1">
+                        </div>
+                    </div>
+                    <div class="form-row my-3">
+                        <div class="col-md col-sm-10 form-group">
+                            <label>Heimatort</label>
+                            <input type="text" class="form-control" placeholder="Heimatort" value="Lübeck">
+                        </div>
+                        <div class="col-md col-sm-10 form-group">
+                            <label>+10 km Radius</label>
+                            <input type="range" class="custom-range" min="5" max="120" step="5" value="10">
+                        </div>
+                    </div>
+                    <div class="form-row my-3">
+                        <div class="col-md col-sm-10 form-group">
+                            <label>Profiltext</label>
+                            <textarea class="form-control" placeholder="Beschreibe dich selber" style="min-width: 100%; max-width: 100%; min-height: 5rem"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
 
+            <div class="row my-3">
+                <div class="col-sm-10 col-md">
+                    Neue Sportart hinzufügen:
+                </div>
+                <div class="col-sm-10 col-md">
+                    <select class="form-control">
+                        <option>Laufen</option>
+                        <option>Radfahren</option>
+                        <option>Wandern/Spazieren</option>
+                        <option>Schwimmen</option>
+                        <option>Nordic-Walking</option>
+                        <option>Karaftsport/Fitnessstudio</option>
+                        <option>Ski fahren</option>
+                        <option>Tennis</option>
+                        <option>Segeln</option>
+                        <option>Klettern</option>
+                        <option>Tanzen</option>
+                        <option>Inline-Skating</option>
+                    </select>
+                </div>
+                <div class="col-sm-10 col-md">
+                    <button class="btn btn-outline-secondary">Hinzufügen</button>
+                </div>
+            </div>
+            <hr>
+
+            <div class="row my-3">
+                <div class="col-sm-10 col-md">
+                    <p><b>Radfahren</b></p>
+                    <button class="btn btn-outline-danger btn-sm">Entfernen</button>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label>Können: Sehr gut</label>
+                        <input type="range" class="custom-range" min="1" max="8" step="1" value="6">
+                    </div>
+                </div>
+                <div class="col-sm-10 col-md">
+                    <div class="form-group">
+                        <label>Ziel:</label>
+                        <select class="form-control">
+                            <option>Fitter werden</option>
+                            <option>Spaß haben</option>
+                            <option>Menschen kennenlernen</option>
+                            <option>Ambitioniert trainieren</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+            <div class="row my-3">
+                <div class="col-sm-10 col-md">
+                    <p><b>Segeln</b></p>
+                    <button class="btn btn-outline-danger btn-sm">Entfernen</button>
+                </div>
+                <div class="col-sm-10 col-md">
+                    <div class="form-group">
+                        <label>Können: Aufsteiger</label>
+                        <input type="range" class="custom-range" min="1" max="8" step="1" value="2">
+                    </div>
+                </div>
+                <div class="col-sm-10 col-md">
+                    <div class="form-group">
+                        <label>Ziel:</label>
+                        <select class="form-control">
+                            <option>Spaß haben</option>
+                            <option>Fitter werden</option>
+                            <option>Menschen kennenlernen</option>
+                            <option>Ambitioniert trainieren</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+        </div>
 
     </main>
 </body>
