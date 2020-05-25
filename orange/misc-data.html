@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Profil vervollständigen</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container">
+
+        <form class="card mt-5 shadow-lg p-3 bg-white rounded" action="feed.html">
+            <div class="card-body">
+                <h2 class="card-title">Profil vervollständigen</h2>
+                <p class="card-subtitle">Du kannst diese und weitere Daten in deinen Einstellungen ändern.</p>
+                <div class="form-group mt-5">
+                    <label>Geschlecht</label>
+                    <select class="form-control">
+                        <option>Männlich</option>
+                        <option>Weiblich</option>
+                        <option>Divers</option>
+                    </select>
+                </div>
+                <div class="form-group mt-2">
+                    <label>Geburtstag</label>
+                    <div class="form-row">
+                        <div class="col-1">
+                            <select class="form-control">
+                                <option>01.</option>
+                                <option>02.</option>
+                                <option>03.</option>
+                                <option>04.</option>
+                                <option>05.</option>
+                                <option>06.</option>
+                                <option>07.</option>
+                                <option>08.</option>
+                                <option>09.</option>
+                                <option>10.</option>
+                                <option>11.</option>
+                                <option>12.</option>
+                                <option>13.</option>
+                                <option>14.</option>
+                                <option>15.</option>
+                                <option>16.</option>
+                                <option>17.</option>
+                                <option>18.</option>
+                                <option>19.</option>
+                                <option>20.</option>
+                                <option>21.</option>
+                                <option>22.</option>
+                                <option>23.</option>
+                                <option>24.</option>
+                                <option>25.</option>
+                                <option>26.</option>
+                                <option>27.</option>
+                                <option>28.</option>
+                                <option>29.</option>
+                                <option>30.</option>
+                                <option>31.</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <select class="form-control">
+                                <option>Januar</option>
+                                <option>Februar</option>
+                                <option>März</option>
+                                <option>April</option>
+                                <option>Mai</option>
+                                <option>Juni</option>
+                                <option>Juli</option>
+                                <option>August</option>
+                                <option>September</option>
+                                <option>Oktober</option>
+                                <option>November</option>
+                                <option>Dezember</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <input class="form-control" type="number" min="1920" max="2004" step="1" placeholder="Jahr">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group mt-2">
+                    <label>Heimatort</label>
+                    <input class="form-control" placeholder="Heimatort">
+                </div>
+                <div class="form-group mt-2">
+                    <label>Suchradius um den Heimatort: +20km</label>
+                    <input type="range" class="custom-range" id="radius">
+                </div>
+                <div class="form-group d-flex justify-content-between mt-5">
+                    <a href="sportrate.html" class="btn btn-outline-secondary">Zurück</a>
+                    <button type="submit" class="btn btn-outline-primary">Weiter</button>
+                </div>
+            </div>
+        </form>
+
+    </main>
+</body>
+
+</html>

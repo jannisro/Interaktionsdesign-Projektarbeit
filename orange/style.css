@@ -1,0 +1,136 @@
+:root {
+    --primary: #F4511E;
+    --primary-contrast: #C5461A;
+    --dark: #2B2D42;
+    --dark-alt: #364156;
+    --light: #90A4AE;
+    --white: #F7FFF7;
+}
+
+body {
+    background: var(--white);
+}
+
+.nav {
+    width: 100%;
+    position:fixed;
+    bottom: 0;
+    left: 0;
+    text-align:center;
+    background: var(--dark);
+    z-index: 100000;
+}
+
+.nav__button {
+    text-decoration: none;
+    color: #FAFAFA;
+    padding: 1rem 0;
+    display: inline-block;
+    font-size: 1.1rem;
+}
+
+.nav__button:hover,
+.nav__button.active {
+    background: var(--primary);
+    color: var(--white);
+    text-decoration: none;
+}
+
+a.no-decoration,
+.card[href*="user.html"] {
+text-decoration: none !important;
+color: #000 !important;
+}
+
+.card[href*="user.html"] {
+    transition: all 250ms;
+}
+
+.card[href*="user.html"]:hover {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.35) !important;
+}
+
+.card[href*="user.html"] img {
+    max-width: 10rem;
+    width: 100%;
+}
+
+main.container {
+    margin-bottom: 7rem;
+}
+
+.btn-primary {
+    background: var(--primary) !important;
+}
+
+.btn-primary:hover {
+    background: var(--primary-contrast) !important;
+}
+
+.btn-outline-primary {
+    border: solid 1px var(--primary) !important;
+    color: var(--primary) !important;
+}
+
+.btn-outline-primary:hover {
+    background: var(--primary) !important;
+    color: var(--white) !important;
+}
+
+.form-control:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 .2rem rgba(244, 81, 30, .25);
+}
+
+.custom-range::-moz-range-thumb,
+.custom-range::-webkit-slider-thumb {
+    background-color: var(--primary) !important;
+}
+
+.custom-control-input:checked ~.custom-control-label::before {
+    border-color: var(--primary) !important;
+    background-color: var(--primary) !important;
+}
+
+
+/* Tiles */
+.tile-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tile {
+    margin: 0.3rem 0.3rem 0 0;
+}
+
+.tile input {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.tile label {
+    display: inline-block;
+    border: solid 1px var(--dark-alt);
+    padding: 0.7rem 1.4rem;
+    transition: all 250ms;
+}
+
+.tile label:hover {
+    background: var(--light);
+}
+
+.tile input:checked ~ label {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
+}
+
+.line-orange {
+    border-color: var(--primary);
+}
+
+.sportrate-box {
+    border: solid 1px var(--light);
+    padding: 1.3rem 2rem;
+}
