@@ -23,7 +23,7 @@ body {
 
 .nav__button {
     text-decoration: none;
-    color: #FAFAFA;
+    color: var(--white);
     padding: 1rem 0;
     display: inline-block;
     font-size: 1.1rem;
@@ -40,6 +40,11 @@ a.no-decoration,
 .card[href*="user.html"] {
 text-decoration: none !important;
 color: #000 !important;
+}
+
+.btn-none {
+    background: none;
+    border: none;
 }
 
 .card[href*="user.html"] {
@@ -133,4 +138,32 @@ main.container {
 .sportrate-box {
     border: solid 1px var(--light);
     padding: 1.3rem 2rem;
+}
+
+
+
+/* Accordion */
+.accordion {
+    cursor: default;
+}
+
+.accordion .card-header {
+    border: solid 1px transparent;
+    transition: all 250ms;
+}
+
+.accordion .card-header:hover {
+    border: solid 1px var(--primary);
+}
+
+.accordion .card-body {
+    display:none;
+}
+
+.accordion.open {
+    border: solid 1px var(--primary);
+}
+
+.accordion.open .card-header img {
+    transform: rotate(180deg);
 }
