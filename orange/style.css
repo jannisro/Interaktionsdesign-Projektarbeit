@@ -7,6 +7,12 @@
     --white: #F7FFF7;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
+* {
+    font-family: 'Source Sans Pro', sans-serif !important;
+}
+
 body {
     background: var(--white);
 }
@@ -21,6 +27,7 @@ body {
     text-align:center;
     background: var(--dark);
     z-index: 100000;
+    box-shadow: -3px -3px 26px 3px rgba(0, 0, 0, 0.3);
 }
 
 .navigation__button {
@@ -112,38 +119,8 @@ main.container {
 }
 
 
-/* Tiles */
-.tile-container {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.tile {
-    margin: 0.3rem 0.3rem 0 0;
-}
-
-.tile input {
-    appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-}
-
-.tile label {
-    display: inline-block;
-    border: solid 1px var(--dark-alt);
-    padding: 0.4rem 1.2rem;
-    transition: all 250ms;
-    font-size: 0.9rem;
-}
-
-.tile label:hover {
-    background: var(--light);
-}
-
-.tile input:checked ~ label {
-    background: var(--primary);
-    border-color: var(--primary);
-    color: var(--white);
+.check-element {
+    margin: 0.3rem 0;
 }
 
 .line-orange {
@@ -158,27 +135,40 @@ main.container {
 
 
 /* Accordion */
-.accordion {
-    cursor: default;
+.accordion-container {
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2),
+    0 2px 2px 0 rgba(0, 0, 0, .14),
+    0 1px 5px 0 rgba(0, 0, 0, .12);
+    border-radius: 4px;
 }
 
-.accordion .card-header {
-    border: solid 1px transparent;
+.accordion {
+    padding: 0.8rem 1rem;
+    cursor: default;
+    transition: all 250ms;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.08);
+}
+
+.accordion__header img {
+    width: 1rem;
+    margin-right: 1rem;
+}
+
+.accordion__header {
+    background: transparent !important;
     transition: all 250ms;
 }
 
-.accordion .card-header:hover {
-    border: solid 1px var(--primary);
+.accordion__body {
+    display: none;
+    padding: 1rem 1.2rem;
+    font-size: 0.9rem;
 }
 
-.accordion .card-body {
-    display:none;
+.accordion:not(.open):hover {
+    background: rgba(0,0,0,0.06);
 }
 
-.accordion.open {
-    border: solid 1px var(--primary);
-}
-
-.accordion.open .card-header img {
+.accordion.open .accordion__header img {
     transform: rotate(180deg);
 }
