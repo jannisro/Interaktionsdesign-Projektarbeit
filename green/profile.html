@@ -34,20 +34,20 @@
 
         <ul class="nav nav-tabs mt-5">
             <li class="nav-item">
-                <a class="nav-link px-5 active" href="profile.html">
+                <a class="nav-link px-3 active" href="profile.html">
                     <img src="../assets/profile-dark.svg" style="width: 1.1rem; margin-right: 0.4rem">
                     Profil
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link px-5" href="settings.html">
+                <a class="nav-link px-3" href="settings.html">
                     <img src="../assets/settings-dark.svg" style="width: 1.1rem; margin-right: 0.4rem">
                     Einstellungen
                 </a>
             </li>
         </ul>
 
-        <div class="card p-5">
+        <div class="card p-3 shadow">
 
             <div class="row">
                 <div class="col-lg-3 d-flex flex-column align-items-center">
@@ -88,8 +88,8 @@
                             </select>
                         </div>
                         <div class="col-md col-sm-10 form-group">
-                            <label>Alter</label>
-                            <input type="number" class="form-control" placeholder="Alter" value="30" min="16" max="120" step="1">
+                            <label for="birthday">Geburtstag</label>
+                            <input type="date" id="birthday" class="form-control" placeholder="Geburtstag" value="1995-08-14">
                         </div>
                     </div>
 
@@ -133,22 +133,22 @@
                         <option>Klettern</option>
                         <option>Tanzen</option>
                         <option>Inline-Skating</option>
+                        <option>Tischtennis</option>
                     </select>
                 </div>
                 <div class="col-sm-10 col-md d-flex justify-content-center align-items-center my-2">
                     <button class="btn btn-outline-secondary">Hinzufügen</button>
                 </div>
             </div>
-            <hr>
 
 
 
-            <div class="card accordion">
-                <div class="card-header d-flex align-items-center">
-                    <img src="../assets/down.svg" alt="Ausklappen" style="width: 1.5rem; margin-right: 0.5rem">
+            <div class="accordion">
+                <div class="accordion__header">
+                    <img src="../assets/down.svg" alt="Ausklappen">
                     <span class="font-weight-bold">Radfahren</span>
                 </div>
-                <div class="card-body">
+                <div class="accordion__body">
 
                     <button class="btn btn-sm btn-primary">
                         <img src="../assets/trash.svg" style="width: 1rem; margin-right: 0.3rem">
@@ -157,48 +157,48 @@
 
                     <div class="mt-3">
                         <p>Können</p>
-                        <div class="tile-container">
-                            <div class="tile">
-                                <input type="radio" name="skill1" id="skill1_1">
-                                <label for="skill1_1">Anfänger</label>
+                        <div>
+                            <div class="check-element custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="skill1" id="skill1_1">
+                                <label class="custom-control-label" for="skill1_1">Anfänger</label>
                             </div>
-                            <div class="tile">
-                                <input type="radio" name="skill1" id="skill1_2">
-                                <label for="skill1_2">Aufsteiger</label>
+                            <div class="check-element custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="skill1" id="skill1_2">
+                                <label class="custom-control-label" for="skill1_2">Aufsteiger</label>
                             </div>
-                            <div class="tile">
-                                <input type="radio" name="skill1" id="skill1_3">
-                                <label for="skill1_3">Durchschnitt</label>
+                            <div class="check-element custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="skill1" id="skill1_3">
+                                <label class="custom-control-label" for="skill1_3">Durchschnitt</label>
                             </div>
-                            <div class="tile">
-                                <input type="radio" name="skill1" id="skill1_4" checked>
-                                <label for="skill1_4">Fortgeschritten</label>
+                            <div class="check-element custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="skill1" id="skill1_4" checked>
+                                <label class="custom-control-label" for="skill1_4">Fortgeschritten</label>
                             </div>
-                            <div class="tile">
-                                <input type="radio" name="skill1" id="skill1_5">
-                                <label for="skill1_5">Experte</label>
+                            <div class="check-element custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="skill1" id="skill1_5">
+                                <label class="custom-control-label" for="skill1_5">Experte</label>
                             </div>
                         </div>
                     </div>
 
                     <div class="mt-3">
                         <p>Ambition</p>
-                        <div class="tile-container">
-                            <div class="tile">
-                                <input type="checkbox" id="ambition1_1">
-                                <label for="ambition1_1">Spaß haben</label>
+                        <div>
+                            <div class="check-element custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="ambition1_1">
+                                <label class="custom-control-label" for="ambition1_1">Spaß haben</label>
                             </div>
-                            <div class="tile">
-                                <input type="checkbox" id="ambition1_2" checked>
-                                <label for="ambition1_2">Menschen kennenlernen</label>
+                            <div class="check-element custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="ambition1_2" checked>
+                                <label class="custom-control-label" for="ambition1_2">Menschen kennenlernen</label>
                             </div>
-                            <div class="tile">
-                                <input type="checkbox" id="ambition1_3">
-                                <label for="ambition1_3">Fitter werden</label>
+                            <div class="check-element custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="ambition1_3">
+                                <label class="custom-control-label" for="ambition1_3">Fitter werden</label>
                             </div>
-                            <div class="tile">
-                                <input type="checkbox" id="ambition1_4" checked>
-                                <label for="ambition1_4">Ambitioniert trainieren</label>
+                            <div class="check-element custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="ambition1_4" checked>
+                                <label class="custom-control-label" for="ambition1_4">Ambitioniert trainieren</label>
                             </div>
                         </div>
                     </div>
@@ -211,12 +211,12 @@
 
             
 
-            <div class="card accordion mt-4">
-                <div class="card-header d-flex align-items-center">
-                    <img src="../assets/down.svg" alt="Ausklappen" style="width: 1.5rem; margin-right: 0.5rem">
+            <div class="accordion mt-4">
+                <div class="accordion__header">
+                    <img src="../assets/down.svg" alt="Ausklappen">
                     <span class="font-weight-bold">Segeln</span>
                 </div>
-                <div class="card-body">
+                <div class="accordion__body">
 
                     <button class="btn btn-sm btn-primary">
                         <img src="../assets/trash.svg" style="width: 1rem; margin-right: 0.3rem">
@@ -225,48 +225,48 @@
 
                     <div class="mt-3">
                         <p>Können</p>
-                        <div class="tile-container">
-                            <div class="tile">
-                                <input type="radio" name="skill1" id="skill1_1">
-                                <label for="skill1_1">Anfänger</label>
+                        <div>
+                            <div class="check-element custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="skill1" id="skill2_1">
+                                <label class="custom-control-label" for="skill2_1">Anfänger</label>
                             </div>
-                            <div class="tile">
-                                <input type="radio" name="skill1" id="skill1_2" checked>
-                                <label for="skill1_2">Aufsteiger</label>
+                            <div class="check-element custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="skill1" id="skill2_2" checked>
+                                <label class="custom-control-label" for="skill2_2">Aufsteiger</label>
                             </div>
-                            <div class="tile">
-                                <input type="radio" name="skill1" id="skill1_3">
-                                <label for="skill1_3">Durchschnitt</label>
+                            <div class="check-element custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="skill1" id="skill2_3">
+                                <label class="custom-control-label" for="skill2_3">Durchschnitt</label>
                             </div>
-                            <div class="tile">
-                                <input type="radio" name="skill1" id="skill1_4">
-                                <label for="skill1_4">Fortgeschritten</label>
+                            <div class="check-element custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="skill1" id="skill2_4">
+                                <label class="custom-control-label" for="skill2_4">Fortgeschritten</label>
                             </div>
-                            <div class="tile">
-                                <input type="radio" name="skill1" id="skill1_5">
-                                <label for="skill1_5">Experte</label>
+                            <div class="check-element custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="skill1" id="skill2_5">
+                                <label class="custom-control-label" for="skill2_5">Experte</label>
                             </div>
                         </div>
                     </div>
 
                     <div class="mt-3">
                         <p>Ambition</p>
-                        <div class="tile-container">
-                            <div class="tile">
-                                <input type="checkbox" id="ambition1_1" checked>
-                                <label for="ambition1_1">Spaß haben</label>
+                        <div>
+                            <div class="check-element custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="ambition2_1" checked>
+                                <label class="custom-control-label" for="ambition2_1">Spaß haben</label>
                             </div>
-                            <div class="tile">
-                                <input type="checkbox" id="ambition1_2" checked>
-                                <label for="ambition1_2">Menschen kennenlernen</label>
+                            <div class="check-element custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="ambition2_2" checked>
+                                <label class="custom-control-label" for="ambition2_2">Menschen kennenlernen</label>
                             </div>
-                            <div class="tile">
-                                <input type="checkbox" id="ambition1_3">
-                                <label for="ambition1_3">Fitter werden</label>
+                            <div class="check-element custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="ambition2_3">
+                                <label class="custom-control-label" for="ambition2_3">Fitter werden</label>
                             </div>
-                            <div class="tile">
-                                <input type="checkbox" id="ambition1_4">
-                                <label for="ambition1_4">Ambitioniert trainieren</label>
+                            <div class="check-element custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="ambition2_4">
+                                <label class="custom-control-label" for="ambition2_4">Ambitioniert trainieren</label>
                             </div>
                         </div>
                     </div>

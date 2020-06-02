@@ -7,6 +7,15 @@
     --white: #F1F8E9;
 }
 
+@font-face {
+    font-family: 'Noto Sans';
+    src: url("../assets/NotoSans-Regular.ttf");
+}
+
+* {
+    font-family: 'Noto Sans', sans-serif !important;
+}
+
 body {
     background: var(--white);
 }
@@ -15,12 +24,13 @@ body {
     display: flex;
     align-items: center;
     width: 100%;
-    position:fixed;
+    position: fixed;
     bottom: 0;
     left: 0;
-    text-align:center;
+    text-align: center;
     background: var(--dark);
     z-index: 100000;
+    box-shadow: -3px -3px 26px 3px rgba(0, 0, 0, 0.3);
 }
 
 .navigation__button {
@@ -49,28 +59,14 @@ body {
     color: var(--primary) !important;
 }
 
-a.no-decoration,
-.card[href*="user.html"] {
-text-decoration: none !important;
-color: #000 !important;
+a.no-decoration {
+    text-decoration: none !important;
+    color: #000 !important;
 }
 
 .btn-none {
     background: none;
     border: none;
-}
-
-.card[href*="user.html"] {
-    transition: all 250ms;
-}
-
-.card[href*="user.html"]:hover {
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.35) !important;
-}
-
-.card[href*="user.html"] img {
-    max-width: 10rem;
-    width: 100%;
 }
 
 main.container {
@@ -106,44 +102,14 @@ main.container {
     background-color: var(--primary) !important;
 }
 
-.custom-control-input:checked ~.custom-control-label::before {
+.custom-control-input:checked~.custom-control-label::before,
+.badge-primary {
     border-color: var(--primary) !important;
     background-color: var(--primary) !important;
 }
 
-
-/* Tiles */
-.tile-container {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.tile {
-    margin: 0.3rem 0.3rem 0 0;
-}
-
-.tile input {
-    appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-}
-
-.tile label {
-    display: inline-block;
-    border: solid 1px var(--dark-alt);
-    padding: 0.4rem 1.2rem;
-    transition: all 250ms;
-    font-size: 0.9rem;
-}
-
-.tile label:hover {
-    background: var(--light);
-}
-
-.tile input:checked ~ label {
-    background: var(--primary);
-    border-color: var(--primary);
-    color: var(--white);
+.check-element {
+    margin: 0.3rem 0;
 }
 
 .line-orange {
@@ -151,34 +117,145 @@ main.container {
 }
 
 .sportrate-box {
-    border: solid 1px var(--light);
     padding: 1.3rem 2rem;
 }
 
 
 
 /* Accordion */
-.accordion {
-    cursor: default;
+.accordion-container {
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2),
+        0 2px 2px 0 rgba(0, 0, 0, .14),
+        0 1px 5px 0 rgba(0, 0, 0, .12);
+    border-radius: 4px;
 }
 
-.accordion .card-header {
+.accordion {
+    padding: 0.8rem 1rem;
+    cursor: default;
+    transition: all 250ms;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.08);
+}
+
+.accordion__header img {
+    width: 1rem;
+    margin-right: 1rem;
+}
+
+.accordion__header {
+    display: flex;
+    align-items: center;
+    background: transparent !important;
+    transition: all 250ms;
+}
+
+.accordion__body {
+    display: none;
+    padding: 1rem 1.2rem;
+    font-size: 0.9rem;
+}
+
+.accordion:not(.open):hover {
+    background: rgba(0, 0, 0, 0.06);
+}
+
+.accordion.open .accordion__header img {
+    transform: rotate(180deg);
+}
+
+/* Sign In */
+.signin {
+    display: flex;
+    justify-content: space-around;
+    width: 25rem;
+    max-width: 100%;
     border: solid 1px transparent;
     transition: all 250ms;
 }
 
-.accordion .card-header:hover {
-    border: solid 1px var(--primary);
+.signin:hover {
+    opacity: 0.8;
 }
 
-.accordion .card-body {
-    display:none;
+.signin__logo {
+    width: 2rem;
 }
 
-.accordion.open {
-    border: solid 1px var(--primary);
+.signin--email {
+    background: var(--primary);
+    color: #fff;
 }
 
-.accordion.open .card-header img {
-    transform: rotate(180deg);
+.signin--google:hover {
+    border-bottom: solid 1px var(--dark-alt);
+}
+
+.signin--facebook {
+    background: #1877f2;
+    color: #fff;
+}
+
+.signin--facebook:hover,
+.signin--email:hover {
+    color: #fff;
+}
+
+/* Chat-Message */
+.chat-message {
+    width: 60%;
+    margin: 2rem 0;
+    padding: 0.3rem 1rem;
+    background: var(--dark);
+    color: #fff;
+    font-size: 0.87rem;
+    line-height: 24px;
+    border-radius: 5px;
+}
+
+.chat-message--right {
+    margin-left: 39%;
+}
+
+/* Feed-Element */
+
+.feed-item {
+    transition: all 250ms;
+    text-decoration: none;
+    color: #000;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.feed-item__image {
+    width: 8rem;
+    height: 8rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 100px;
+}
+
+.feed-item__image img {
+    max-width: 100%;
+}
+
+.feed-item:hover {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.35) !important;
+    text-decoration: none;
+    color: #000;
+}
+
+.feed-item__container {
+    width: 100%;
+}
+
+.feed-item__sport {
+    display: inline-block;
+    font-size: 0.8rem;
+    padding: 0.2rem 0.6rem;
+    margin: 0.2rem 0.6rem 0.2rem 0;
+    background: var(--primary);
+    color: #fff;
 }

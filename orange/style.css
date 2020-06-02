@@ -7,10 +7,13 @@
     --white: #F7FFF7;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+@font-face {
+    font-family: 'Noto Sans';
+    src: url("../assets/NotoSans-Regular.ttf");
+}
 
 * {
-    font-family: 'Source Sans Pro', sans-serif !important;
+    font-family: 'Noto Sans', sans-serif !important;
 }
 
 body {
@@ -56,8 +59,7 @@ body {
     color: var(--primary) !important;
 }
 
-a.no-decoration,
-.card[href*="user.html"] {
+a.no-decoration {
 text-decoration: none !important;
 color: #000 !important;
 }
@@ -65,19 +67,6 @@ color: #000 !important;
 .btn-none {
     background: none;
     border: none;
-}
-
-.card[href*="user.html"] {
-    transition: all 250ms;
-}
-
-.card[href*="user.html"]:hover {
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.35) !important;
-}
-
-.card[href*="user.html"] img {
-    max-width: 10rem;
-    width: 100%;
 }
 
 main.container {
@@ -113,11 +102,10 @@ main.container {
     background-color: var(--primary) !important;
 }
 
-.custom-control-input:checked ~.custom-control-label::before {
+.custom-control-input:checked ~.custom-control-label::before, .badge-primary {
     border-color: var(--primary) !important;
     background-color: var(--primary) !important;
 }
-
 
 .check-element {
     margin: 0.3rem 0;
@@ -128,7 +116,6 @@ main.container {
 }
 
 .sportrate-box {
-    border: solid 1px var(--light);
     padding: 1.3rem 2rem;
 }
 
@@ -155,6 +142,8 @@ main.container {
 }
 
 .accordion__header {
+    display: flex;
+    align-items: center;
     background: transparent !important;
     transition: all 250ms;
 }
@@ -171,4 +160,100 @@ main.container {
 
 .accordion.open .accordion__header img {
     transform: rotate(180deg);
+}
+
+/* Sign In */
+.signin {
+    display: flex;
+    justify-content: space-around;
+    width: 25rem;
+    max-width:100%;
+    border: solid 1px transparent;
+    transition: all 250ms;
+}
+
+.signin:hover {
+    opacity: 0.8;
+}
+
+.signin__logo {
+    width: 2rem;
+}
+
+.signin--email {
+    background: var(--primary);
+    color: #fff;
+}
+
+.signin--google:hover {
+    border-bottom: solid 1px var(--dark-alt);
+}
+
+.signin--facebook {
+    background: #1877f2;
+    color: #fff;
+}
+
+.signin--facebook:hover, .signin--email:hover {
+    color: #fff;
+}
+
+/* Chat-Message */
+.chat-message {
+    width: 60%;
+    margin: 2rem 0;
+    padding: 0.3rem 1rem;
+    background: var(--dark);
+    color: #fff;
+    font-size: 0.87rem;
+    line-height: 24px;
+    border-radius: 5px;
+}
+
+.chat-message--right {
+    margin-left: 39%;
+}
+
+/* Feed-Element */
+
+.feed-item {
+    transition: all 250ms;
+    text-decoration: none;
+    color: #000;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.feed-item__image {
+    width: 8rem;
+    height: 8rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 100px;
+}
+
+.feed-item__image img {
+    max-width: 100%;
+}
+
+.feed-item:hover {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.35) !important;
+    text-decoration: none;
+    color: #000;
+}
+
+.feed-item__container {
+    width: 100%;
+}
+
+.feed-item__sport {
+    display: inline-block;
+    font-size: 0.8rem;
+    padding: 0.2rem 0.6rem;
+    margin: 0.2rem 0.6rem 0.2rem 0;
+    background: var(--primary);
+    color: #fff;
 }
