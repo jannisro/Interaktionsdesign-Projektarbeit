@@ -257,3 +257,13 @@ main.container {
     background: var(--primary);
     color: #fff;
 }
+
+.profile-page {
+    padding: 3rem;
+}
+
+@media (max-width: 500px) {
+    .profile-page {
+        padding: 0.5rem;
+    }
+}
