@@ -9,7 +9,7 @@
 
 @font-face {
     font-family: 'Noto Sans';
-    src: url("../assets/NotoSans-Regular.ttf");
+    src: url("assets/NotoSans-Regular.ttf");
 }
 
 * {
@@ -233,6 +233,7 @@ main.container {
     background-size: contain;
     background-repeat: no-repeat;
     border-radius: 100px;
+    border: solid 1px var(--dark-alt);
 }
 
 .feed-item__image img {
@@ -251,11 +252,10 @@ main.container {
 
 .feed-item__sport {
     display: inline-block;
-    font-size: 0.8rem;
-    padding: 0.2rem 0.6rem;
-    margin: 0.2rem 0.6rem 0.2rem 0;
-    background: var(--primary);
-    color: #fff;
+    font-size: 1rem;
+    padding: 0.2rem 0.8rem 0.2rem 0;
+    margin: 0.2rem 0;
+    color: var(--primary);
 }
 
 .profile-page {
@@ -265,5 +265,17 @@ main.container {
 @media (max-width: 500px) {
     .profile-page {
         padding: 0.5rem;
+    }
+}
+
+@media (max-width: 990px) {
+    .feed-item__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feed-item__sport {
+        padding: 0.2rem 0.8rem;
     }
 }
