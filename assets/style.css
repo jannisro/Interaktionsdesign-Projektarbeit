@@ -207,6 +207,7 @@ main.container {
 .signin {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 25rem;
     max-width:100%;
     border: solid 1px transparent;
