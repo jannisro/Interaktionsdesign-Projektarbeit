@@ -12,46 +12,48 @@
 </head>
 
 <body>
-    <nav class="navigation">
-        <a href="feed.html" class="col navigation__button">
-            <img src="assets/home.svg">
-            Start
+    <div class="menu">
+        <a href="feed.html" class="branding">
+            <img class="branding__image" src="assets/images/logo.svg">
+            <span class="branding__name">Sportmate</span>
         </a>
-        <a href="search.html" class="col navigation__button">
-            <img src="assets/search.svg">
-            Suche
-        </a>
-        <a href="chat.html" class="col navigation__button">
-            <img src="assets/chat.svg">
-            Chat
-        </a>
-        <a href="profile.html" class="col navigation__button active">
-            <img src="assets/profile.svg">
-            Profil
-        </a>
-    </nav>
+        <nav class="navigation">
+            <a href="feed.html" class="col navigation__button">
+                <img src="assets/images/home.svg">
+                Start
+            </a>
+            <a href="search.html" class="col navigation__button">
+                <img src="assets/images/search.svg">
+                Suche
+            </a>
+            <a href="chat.html" class="col navigation__button">
+                <img src="assets/images/chat.svg">
+                Chat
+            </a>
+            <a href="profile.html" class="col navigation__button active">
+                <img src="assets/images/profile.svg">
+                Profil
+            </a>
+        </nav>
+    </div>
     <main class="container">
 
-        <ul class="nav nav-tabs mt-5">
-            <li class="nav-item">
-                <a class="nav-link px-3 active" href="profile.html">
-                    <img src="assets/profile-dark.svg" style="width: 1.1rem; margin-right: 0.4rem">
-                    Profil
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link px-3" href="settings.html">
-                    <img src="assets/settings-dark.svg" style="width: 1.1rem; margin-right: 0.4rem">
-                    Einstellungen
-                </a>
-            </li>
-        </ul>
+        <nav class="tab-nav">
+            <a href="profile.html" class="tab-nav__element active">
+                <img src="assets/images/profile-dark.svg">
+                Profil
+            </a>
+            <a href="settings.html" class="tab-nav__element">
+                <img src="assets/images/settings-dark.svg">
+                Einstellungen
+            </a>
+        </nav>
+        <div class="card p-3 pt-5 shadow">
 
-        <div class="card p-3 shadow">
 
             <div class="row">
                 <div class="col-lg-3 d-flex flex-column align-items-center">
-                    <div class="feed-item__image" style="background-image: url(assets/profile/placeholder.png)"></div>
+                    <div class="feed-item__image" style="background-image: url(assets/images/profile-pictures/placeholder.png)"></div>
                     <button class="btn btn-sm btn-outline-secondary mt-3">Profilbild bearbeiten</button>
                 </div>
                 <div class="col form px-4">
@@ -127,7 +129,7 @@
                         <option>Schwimmen</option>
                         <option>Nordic-Walking</option>
                         <option>Karaftsport/Fitnessstudio</option>
-                        <option>Ski fahren</option>
+                        <option>Ski</option>
                         <option>Tennis</option>
                         <option>Segeln</option>
                         <option>Klettern</option>
@@ -145,13 +147,13 @@
 
             <div class="accordion">
                 <div class="accordion__header">
-                    <img src="assets/down.svg" alt="Ausklappen">
+                    <img src="assets/images/down.svg" alt="Ausklappen">
                     <span class="font-weight-bold">Radfahren</span>
                 </div>
                 <div class="accordion__body">
 
                     <button class="btn btn-sm btn-primary">
-                        <img src="assets/trash.svg" style="width: 1rem; margin-right: 0.3rem">
+                        <img src="assets/images/trash.svg" style="width: 1rem; margin-right: 0.3rem">
                         Entfernen
                     </button>
 
@@ -213,13 +215,13 @@
 
             <div class="accordion mt-4">
                 <div class="accordion__header">
-                    <img src="assets/down.svg" alt="Ausklappen">
+                    <img src="assets/images/down.svg" alt="Ausklappen">
                     <span class="font-weight-bold">Segeln</span>
                 </div>
                 <div class="accordion__body">
 
                     <button class="btn btn-sm btn-primary">
-                        <img src="assets/trash.svg" style="width: 1rem; margin-right: 0.3rem">
+                        <img src="assets/images/trash.svg" style="width: 1rem; margin-right: 0.3rem">
                         Entfernen
                     </button>
 

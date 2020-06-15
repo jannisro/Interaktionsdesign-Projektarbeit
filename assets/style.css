@@ -9,7 +9,7 @@
 
 @font-face {
     font-family: 'Noto Sans';
-    src: url("assets/NotoSans-Regular.ttf");
+    src: url("NotoSans-Regular.ttf");
 }
 
 * {
@@ -20,9 +20,22 @@ body {
     background: var(--white);
 }
 
-.navigation {
+.headbar {
+    width: 100%;
+    background: var(--dark);
+    display: flex;
+    justify-content: center;
+    padding: 0.7rem;
+}
+
+.headbar__branding {
     display: flex;
     align-items: center;
+}
+
+.menu {display: flex;
+    align-items: center;
+    justify-content: space-around;
     width: 100%;
     position:fixed;
     bottom: 0;
@@ -30,7 +43,35 @@ body {
     text-align:center;
     background: var(--dark);
     z-index: 100000;
-    box-shadow: -3px -3px 26px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 3px 11px 1px rgba(0, 0, 0, 0.5);
+}
+
+.branding {
+    display:none;
+    text-decoration: none;
+}
+
+.branding:hover {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.branding__image {
+    max-width: 2rem;
+}
+
+.branding__name {
+    font-size: 1.4rem;
+    color: var(--primary);
+    margin-left: 0.5rem;
+    font-weight: bold;
+}
+
+.navigation {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align:center;
 }
 
 .navigation__button {
@@ -214,7 +255,14 @@ main.container {
     margin-left: 39%;
 }
 
-/* Feed-Element */
+/* Feed */
+
+.feed {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
 
 .feed-item {
     transition: all 250ms;
@@ -236,6 +284,12 @@ main.container {
     border: solid 1px var(--dark-alt);
 }
 
+.feed-item__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .feed-item__image img {
     max-width: 100%;
 }
@@ -253,7 +307,7 @@ main.container {
 .feed-item__sport {
     display: inline-block;
     font-size: 1rem;
-    padding: 0.2rem 0.8rem 0.2rem 0;
+    padding: 0.2rem 0.8rem;
     margin: 0.2rem 0;
     color: var(--primary);
 }
@@ -262,20 +316,81 @@ main.container {
     padding: 3rem;
 }
 
+/* Tab-Nav */
+.tab-nav {
+    display: flex;
+    align-items: center;
+}
+
+.tab-nav__element {
+    text-decoration: none;
+    color: #000;
+    border-bottom: solid 3px transparent;
+    margin-right: 2rem;
+    padding: 0.4rem 1.6rem;
+    transition: all 250ms;
+}
+
+.tab-nav__element img {
+    max-width: 1rem;
+    margin-right: 0.4rem;
+}
+
+.tab-nav__element:hover, .tab-nav__element.active {
+    color: var(--primary);
+    border-bottom: solid 3px var(--primary);
+    text-decoration: none;
+}
+
 @media (max-width: 500px) {
     .profile-page {
         padding: 0.5rem;
     }
 }
 
-@media (max-width: 990px) {
-    .feed-item__body {
+@media (min-width: 1200px) {
+    .feed-item {
+        width: 30% !important;
+        margin: 1.3rem 1% !important; 
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+    .feed-item {
+        width: 41%;
+        margin: 1.3rem 4%;
+    }
+}
+
+@media (min-width: 800px) {
+    .headbar {
+        display: none;
+    }
+
+    .menu {
+        top: 0;
+        bottom: auto;
+        justify-content: center;display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .branding {
         display: flex;
-        flex-direction: column;
         align-items: center;
     }
 
-    .feed-item__sport {
-        padding: 0.2rem 0.8rem;
+    .navigation {
+        width: auto;
+    }
+
+    .navigation__button {
+        flex-basis: content;
+        flex-grow: initial;
+        padding: 1rem 2rem;
+    }
+
+    .container {
+        padding-top: 7rem;
     }
 }
