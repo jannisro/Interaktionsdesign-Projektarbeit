@@ -47,7 +47,7 @@
 
         <div class="feed">
 
-            <a heeref="manuel.html" class="feed-item card shadow my-4">
+            <a href="manuel.html" class="feed-item card shadow my-4">
                 <div class="card-body feed-item__container justify-content-around">
                     <div class="d-flex justify-content-center">
                         <div class="feed-item__image" style="background-image: url(assets/images/profile-pictures/manuel.jpg)"></div>
@@ -148,14 +148,6 @@
         </div>
 
     </main>
-
-    <script>
-        $('.feed-item').on('click', function() {
-            let currentWidth = parseInt($(this).innerWidth());
-            $(this).css('width', $(this).innerWidth()*2+"px");
-            console.log($(this).css('width'));
-        });
-    </script>
 </body>
 
 </html>
