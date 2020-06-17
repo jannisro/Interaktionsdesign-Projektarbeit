@@ -390,10 +390,11 @@ main.container {
     padding-top: 6rem;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
     box-shadow: 3px 3px 17px 1px rgba(0, 0, 0, 0.3) inset;
+    line-height: 29px;
 }
 
 .landing-main:first-of-type {
@@ -503,7 +504,7 @@ main.container {
     }
 
     .navigation__button {
-        flex-basis: content;
+        flex-basis: auto;
         flex-grow: initial;
         padding: 1rem 2rem;
     }
