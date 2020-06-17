@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sportmate</title>
     <link rel="stylesheet" href="assets/bootstrap.min.css">
-    <title>Anmelden</title>
-
     <link rel="stylesheet" href="assets/style.css">
 </head>
-
 <body>
-    <main class="container">
+    <header class="landing-header">
+        <div class="landing-header__branding">
+            <img src="assets/images/logo.svg" alt="Sportmate" class="landing-header__image">
+            <span class="landing-header__name">Sportmate</span>
+        </div>
+        <a href="signin.html" class="btn btn-primary">Anmelden</a>
+    </header>
 
-        <form class="card mt-5 shadow-lg p-3 bg-white rounded" action="register.html">
-            <div class="card-body">
-                <h2 class="card-title text-center">Anmelden</h2>
-                <div class="form-row mt-5 justify-content-center">
-                    <a href="email.html" class="signin signin--email btn btn-lg shadow">
-                        <img src="assets/images/signin-icons/email.svg" class="signin__logo" alt="E-Mail Icon">
-                        Mit E-Mail registrieren
-                    </a>
-                </div>
-                <div class="form-row mt-5 justify-content-center">
-                    <a href="sportpicker.html" class="signin signin--google btn btn-lg shadow">
-                        <img src="assets/images/signin-icons/google.png" class="signin__logo" alt="Google-Logo">
-                        Mit Google anmelden
-                    </a>
-                </div>
-                <div class="form-row mt-5 justify-content-center">
-                    <a href="sportpicker.html" class="signin signin--facebook btn btn-lg shadow">
-                        <img src="assets/images/signin-icons/facebook.png" class="signin__logo" alt="Facebook-Logo">
-                        Mit Facebook anmelden
-                    </a>
-                </div>
-            </div>
-        </form>
+    <div class="landing-main orange">
+        <div class="landing-main__content">
+            <h1>Finde Sport- und Trainingspartner, die zu dir passen...</h1>
+        </div>
+        <div class="landing-main__image">
+            <img src="assets/images/landing/screenshot1.png">
+        </div>
+    </div>
 
-    </main>
+    <div class="landing-main white">
+        <div class="landing-main__image">
+            <img src="assets/images/landing/screenshot2.png" alt="">
+        </div>
+        <div class="landing-main__content">
+            <h1>...durch individuelles Matching auf Grundlage deiner Präferenzen!</h1>
+        </div>
+    </div>
+
+    <div class="landing-main dark">
+        <div class="landing-main__top">
+            <h3>Suche nach Ort, Können, Sportart oder Ambition und finde jederzeit ud überall Sportpartner!</h3>
+        </div>
+        <div class="landing-main__bottom">
+            <img src="assets/images/landing/screenshot3.png" alt="">
+        </div>
+    </div>
+
 </body>
-
 </html>

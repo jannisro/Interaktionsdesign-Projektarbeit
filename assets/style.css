@@ -344,6 +344,111 @@ main.container {
     text-decoration: none;
 }
 
+/* Landing */
+.landing-header {
+    width: 100%;
+    background: var(--dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0.7rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+}
+
+.landing-header__branding {
+    display: flex;
+    align-items: center;
+}
+
+.landing-header__image {
+    max-width: 2rem;
+}
+
+.landing-header__name {
+    font-size: 1.4rem;
+    color: var(--primary);
+    margin-left: 0.5rem;
+    font-weight: bold;
+}
+
+.landing-main {
+    padding-top: 6rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    box-shadow: 3px 3px 17px 1px rgba(0, 0, 0, 0.3) inset;
+}
+
+.landing-main:first-of-type {
+    padding-top: 8rem;
+}
+
+.landing-main.orange {
+    background: var(--primary);
+}
+
+.landing-main.white {
+    background: var(--white);
+}
+
+.landing-main.dark {
+    background: var(--dark-alt);
+    color: var(--white);
+}
+
+.landing-main__content {
+    width: 65%;
+    padding: 4rem 2rem 0 2rem;
+}
+
+
+.landing-main__image {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+}
+
+.landing-main__image img {
+    max-width: 95%;
+    max-height: 80vh;
+}
+
+.landing-main__top, .landing-main__bottom {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5rem 0 0 0;
+}
+
+.landing-main__top img, .landing-main__bottom img {
+    max-width: 80%;
+    max-height: 70vh;
+}
+
+@media (max-width: 1100px) {
+    .landing-main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .landing-main__content, .landing-main__image, .landing-main__top, .landing-main__bottom {
+        margin: 1rem 0;
+        width: 90%;
+    }
+
+    .landing-main__bottom {
+        margin-bottom: 0;
+    }
+}
+
+/* Allgemeine Queries */
 @media (max-width: 500px) {
     .profile-page {
         padding: 0.5rem;
