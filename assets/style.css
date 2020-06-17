@@ -359,9 +359,21 @@ main.container {
     z-index: 10000;
 }
 
+.landing-header.unfixed {
+    position: relative;
+    justify-content: center;
+}
+
 .landing-header__branding {
     display: flex;
     align-items: center;
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.landing-header__branding:hover {
+    text-decoration: none;
+    color: var(--primary);
 }
 
 .landing-header__image {
@@ -370,7 +382,6 @@ main.container {
 
 .landing-header__name {
     font-size: 1.4rem;
-    color: var(--primary);
     margin-left: 0.5rem;
     font-weight: bold;
 }
