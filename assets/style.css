@@ -267,7 +267,7 @@ main.container {
 }
 
 .feed-item {
-    transition: all 250ms;
+    transition: all 300ms;
     text-decoration: none;
     color: #000;
     width: 100%;
@@ -300,6 +300,7 @@ main.container {
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.35) !important;
     text-decoration: none;
     color: #000;
+    cursor: default;
 }
 
 .feed-item__container {
@@ -316,6 +317,52 @@ main.container {
 
 .profile-page {
     padding: 3rem;
+}
+
+/* Popup und Blur */
+.popup {
+    min-height: 80vh;
+    position: fixed;
+    background: #fff;
+    z-index: 1000;
+    display: none;
+    top: 0;
+    left: 0;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);
+    overflow-y: scroll;;
+}
+
+.popup__head {
+    width: 100%;
+    padding: 0.3rem 0 0 0.3rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.popup__close {
+    background: transparent;
+    border: none;
+}
+
+.popup__close img {
+    width: 3rem;
+}
+
+.popup__body {
+    width: 90%;
+    margin-left: 5%;
+    padding-top: 1.5rem;
+}
+
+.blur {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background: var(--white);
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
 }
 
 /* Tab-Nav */
@@ -460,6 +507,7 @@ main.container {
     }
 }
 
+
 /* Allgemeine Queries */
 @media (max-width: 500px) {
     .profile-page {
@@ -469,8 +517,8 @@ main.container {
 
 @media (min-width: 1200px) {
     .feed-item {
-        width: 30% !important;
-        margin: 1.3rem 1% !important; 
+        width: 31.3%;
+        margin: 1.3rem 1%; 
     }
 }
 
@@ -489,7 +537,8 @@ main.container {
     .menu {
         top: 0;
         bottom: auto;
-        justify-content: center;display: flex;
+        justify-content: center;
+        display: flex;
         align-items: center;
         justify-content: space-around;
     }
@@ -511,5 +560,9 @@ main.container {
 
     .container {
         padding-top: 7rem;
+    }
+
+    .popup {
+        margin-top: 4rem;
     }
 }
