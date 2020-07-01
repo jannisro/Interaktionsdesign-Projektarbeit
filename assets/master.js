@@ -36,13 +36,14 @@ function setPopupSize() {
 }
 
 $('.feed-item').on('click', function () {
+    console.log($(this).attr('data-src'))
     setPopupSize();
     loadProfile($(this).attr('data-src'));
-    $('.popup').fadeIn(200);
-    $('.blur').fadeIn(200);
+    $('.popup').fadeIn(400);
+    $('.blur').fadeIn(400);
 });
 
 $('.popup__close, .blur').on('click', function () {
-    $('.popup').fadeOut(200);
-    $('.blur').fadeOut(200);
+    $('.popup').fadeOut(400);
+    $('.blur').fadeOut(400);
 });

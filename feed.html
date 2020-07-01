@@ -96,7 +96,7 @@
                 </div>
             </div>
 
-            <div class="feed-item card shadow my-4">
+            <div class="feed-item card shadow my-4" data-src="torben">
                 <div class="card-body feed-item__container">
                     <div class="d-flex justify-content-center">
                         <div class="feed-item__image" style="background-image: url(assets/images/profile-pictures/torben.jpg)"></div>
@@ -112,7 +112,7 @@
                 </div>
             </div>
 
-            <div class="feed-item card shadow my-4">
+            <div class="feed-item card shadow my-4" data-src="miriam">
                 <div class="card-body feed-item__container">
                     <div class="d-flex justify-content-center">
                         <div class="feed-item__image" style="background-image: url(assets/images/profile-pictures/miriam.jpg)"></div>
@@ -129,7 +129,7 @@
                 </div>
             </div>
 
-            <div class="feed-item card shadow my-4">
+            <div class="feed-item card shadow my-4" data-src="judith">
                 <div class="card-body feed-item__container">
                     <div class="d-flex justify-content-center">
                         <div class="feed-item__image" style="background-image: url(assets/images/profile-pictures/judith.jpg)"></div>
@@ -260,6 +260,80 @@
                 {
                     "name": "Klettern",
                     "skill": "Aufsteiger",
+                    "ambition": ["Ambitioniert trainieren"]
+                }
+            ]
+        }
+    </script>
+
+    <script type="text/template" id="torben">
+        {
+            "name": "Torben Müller",
+            "image": "assets\/images/profile-pictures/torben.jpg",
+            "location": "Lübeck",
+            "age": 29,
+            "text": "",
+            "sports": [
+                {
+                    "name": "Laufen",
+                    "skill": "Durchschnittlich",
+                    "ambition": ["Spaß haben", "Menschen kennenlernen"],
+                    "time": "Früher Morgen"
+                },
+                {
+                    "name": "Klettern",
+                    "skill": "Experte",
+                    "ambition": ["Spaß haben", "Menschen kennenlernen"]
+                }
+            ]
+        }
+    </script>
+
+    <script type="text/template" id="miriam">
+        {
+            "name": "Miriam Dani",
+            "image": "assets\/images/profile-pictures/miriam.jpg",
+            "location": "Stockelsdorf",
+            "age": 25,
+            "text": "",
+            "sports": [
+                {
+                    "name": "Segeln",
+                    "skill": "Experte",
+                    "ambition": ["Ambitioniert trainieren"]
+                },
+                {
+                    "name": "Tanzen",
+                    "skill": "Experte",
+                    "ambition": ["Menschen kennenlernen"],
+                    "time": "Später Abend"
+                },
+                {
+                    "name": "Laufen",
+                    "skill": "Durchschnittlich",
+                    "ambition": ["Spaß haben", "Menschen kennenlernen"],
+                    "time": "Früher Morgen"
+                },
+                {
+                    "name": "Rad fahren",
+                    "skill": "Anfänger",
+                    "ambition": ["Spaß haben", "Menschen kennenlernen"]
+                }
+            ]
+        }
+    </script>
+
+    <script type="text/template" id="judith">
+        {
+            "name": "Judith Degerlund",
+            "image": "assets\/images/profile-pictures/judith.jpg",
+            "location": "Lübeck",
+            "age": 22,
+            "text": "",
+            "sports": [
+                {
+                    "name": "Schwimmen",
+                    "skill": "Experte",
                     "ambition": ["Ambitioniert trainieren"]
                 }
             ]
